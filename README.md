@@ -57,6 +57,39 @@ Further reading
 - do extensive capacity monitoring including drilldowns per team
 </details>
 
+
+## Centralized Logging
+
+### Do not start _centralized logging_ before ...
+
+Actually do this from the start. Even if it is only a small log server or SaaS.
+
+<details>
+  <summary>Why?</summary>
+
+- you always need log aggregation
+- having centralized logging early on can defer having a monitoring system
+</details>
+
+### Do not start _self-hosted centralized logging_ before ...
+
+- you have good estimated on log volume
+- you have good estimates on possible deduplication
+- you know what retention you want to achieve
+- you have a reliable storage backend (e.g. S3 appliance)
+- you have a platform team guaranteeing uptime
+- your network can handle the log ingest
+- your network can handle catchup of log ingest after network outages
+- you are able to separate high volume log traffic from latency relevant business logic
+- you monitoring log ingest per team to handle cases where suddenly debug traces are set to maximum cause large amounts of log lines
+
+<details>
+  <summary>Why?</summary>
+
+- log volume quickly becomes very large
+- teams forget that they enabled debug tracing
+</details>
+
 ## Monitoring
 
 ### Do not start _cloud-hosted monitoring_ (APM) before ...
@@ -64,12 +97,17 @@ Further reading
 - you run your platform in the cloud anyway
 - cost is not an issue
 - you do not have a platform/monitoring team
+- you know what retention and which resolution intervals you want to achieve
+- as long as your logging solution serves well
 
 <details>
   <summary>Why?</summary>
 
 - cost if usually billed by ingestion, teams tend to ingest a lot, costs explode
 - you will need monitoring experts anyway and can avoid the lock-in
+- not thinking about resolution intervals and relying simply on retention will lead to either
+  - massive amount of data (when doing no downsampling)
+  - lost information (when past incidents are downsampled away) 
 </details>
 
 ### Do not start _self-hosted monitoring_ before ...
