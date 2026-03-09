@@ -77,6 +77,8 @@ Further reading
 
 ### Do not start _a hybrid cloud_ before
 
+- you have dedicated platform teams for cloud and on-prem
+- you know how to integrate cloud+on-prem monitoring/alerting for use cases using both
 - you know how much ingress/egress into the cloud this means
 - you know the throughput of you network into the cloud
 - you have cloud ingress cost monitoring automated
