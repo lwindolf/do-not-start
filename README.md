@@ -72,3 +72,18 @@ Further reading
 - teams need experts helping building dashboards
 - teams need experts helping with query performance
 </details>
+
+## Hybrid cloud
+
+### Do not start _a hybrid cloud_ before
+
+- you know how much ingress/egress into the cloud this means
+- you know the throughput of you network into the cloud
+
+<details>
+  <summary>Why?</summary>
+
+- cloud ingress is usually very expensive
+- cloud ingress might not scale well at all
+- failover for cloud ingress is excessively expensive, it usually stays a SPoF
+</details>
