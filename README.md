@@ -79,6 +79,7 @@ Further reading
 
 - you know how much ingress/egress into the cloud this means
 - you know the throughput of you network into the cloud
+- you have cloud ingress cost monitoring automated
 
 <details>
   <summary>Why?</summary>
