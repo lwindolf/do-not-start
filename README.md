@@ -10,13 +10,16 @@ given here can be thought of as input for [architectural decision records](https
 ### Do not start _cloud-hosted k8s_ before ...
 
 - dev team >=10 people
-- you have 1 platform engineer doing on-call (that means 3 platform engineers)
 
 <details>
   <summary>Why?</summary>
 
 - smaller dev teams will not be able to build the knowledge
 - smaller dev teams will lack distributed knowledge
+
+Further reading
+
+- https://dev.to/synsun/kubernetes-vs-docker-swarm-vs-nomad-container-orchestration-showdown-2026-532e
   
 </details>
 
@@ -33,6 +36,11 @@ given here can be thought of as input for [architectural decision records](https
 - smaller dev teams will lack distributed knowledge
 - platform engineers will have to constantly upgrade k8s components
 - platform engineers needed to set and enforce k8s best practices
+
+Further reading
+
+- https://dev.to/synsun/kubernetes-vs-docker-swarm-vs-nomad-container-orchestration-showdown-2026-532e
+
 </details>
 
 ## Monitoring
