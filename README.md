@@ -71,6 +71,21 @@ Actually do this from the start. Even if it is only a small log server or SaaS.
 - having centralized logging early on can defer having a monitoring system
 </details>
 
+### Do not start _SaaS-hosted centralized logging_ before ...
+
+- you are clear on security implications
+- you are sure your logs have only allowed user data (think GDPR, IP adresses...)
+- you have good estimated on log volume that needs ingesting to your logging SaaS
+- your network can handle the log ingest
+- you monitoring log ingest per team to handle cases where suddenly debug traces are set to maximum cause large amounts of log lines
+
+<details>
+  <summary>Why?</summary>
+
+- it is hard to predict ingest and growth
+- SaaS services usually have cost per ingest volume
+</details>
+
 ### Do not start _self-hosted centralized logging_ before ...
 
 - you have good estimated on log volume
