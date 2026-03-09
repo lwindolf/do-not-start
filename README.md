@@ -1,0 +1,64 @@
+# Do not start X before ...
+
+This is a collection of criteria for not doing DevOps thing X before Y is given.
+These rules a in my opinion good definitions of threshold which defines when
+you want to introduce a certain type of complexity in your org+IT system. The criteria
+given here can be thought of as input for [architectural decision records](https://github.com/adr/madr).
+
+## kubernetes
+
+### Do not start _cloud-hosted k8s_ before ...
+
+- dev team >=10 people
+- you have 1 platform engineer doing on-call (that means 3 platform engineers)
+
+<details>
+  <summary>Why?</summary>
+
+- smaller dev teams will not be able to build the knowledge
+- smaller dev teams will lack distributed knowledge
+  
+</details>
+
+### Do not start _self-hosted k8s_ before ...
+
+- dev team >=10 people
+- you have 1 platform engineer doing on-call (that means 3 platform engineers)
+- you have SaaS APM monitoring or host it yourself with 2+ additional monitoring experts in your platform team
+
+<details>
+  <summary>Why?</summary>
+
+- smaller dev teams will not be able to build the knowledge
+- smaller dev teams will lack distributed knowledge
+- platform engineers will have to constantly upgrade k8s components
+- platform engineers needed to set and enforce k8s best practices
+</details>
+
+## Monitoring
+
+### Do not start _cloud-hosted monitoring_ (APM) before ...
+
+- you run your platform in the cloud anyway
+- cost is not an issue
+- you do not have a platform/monitoring team
+
+<details>
+  <summary>Why?</summary>
+
+- cost if usually billed by ingestion, teams tend to ingest a lot, costs explode
+- you will need monitoring experts anyway and can avoid the lock-in
+</details>
+
+### Do not start _self-hosted monitoring_ before ...
+
+- you have 2 dedicated monitoring experts
+
+<details>
+  <summary>Why?</summary>
+
+- monitoring SW (grafana, prometheus) needs updating peridiocally
+- data ingestion / compaction has a high failover rate
+- teams need experts helping building dashboards
+- teams need experts helping with query performance
+</details>
