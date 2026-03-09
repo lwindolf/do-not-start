@@ -43,6 +43,20 @@ Further reading
 
 </details>
 
+### Do not start _self-hosted k8s quota/limits_ before ...
+
+- you know how much overcommit you want to allow
+- you know how much resource waste you want to accept
+
+<details>
+  <summary>Why?</summary>
+
+- strict quotas usually cause very low cluster utilisation, wasting money
+- optimize cost by not setting CPU limits
+- consider only limiting RAM
+- do extensive capacity monitoring including drilldowns per team
+</details>
+
 ## Monitoring
 
 ### Do not start _cloud-hosted monitoring_ (APM) before ...
