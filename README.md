@@ -61,6 +61,8 @@ Further reading
 ### Do not start _self-hosted monitoring_ before ...
 
 - you have 2 dedicated monitoring experts
+- you have a platform team guaranteeing necessary uptime
+- you know how to do reliable alerting
 
 <details>
   <summary>Why?</summary>
