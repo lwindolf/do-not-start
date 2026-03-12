@@ -75,7 +75,7 @@ Actually do this from the start. Even if it is only a small log server or SaaS.
 
 - you are clear on security implications
 - you are sure your logs have only allowed user data (think GDPR, IP adresses...)
-- you have good estimated on log volume that needs ingesting to your logging SaaS
+- you have good estimate on log volume that needs ingesting to your logging SaaS
 - your network can handle the log ingest
 - you monitoring log ingest per team to handle cases where suddenly debug traces are set to maximum cause large amounts of log lines
 
