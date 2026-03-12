@@ -140,6 +140,22 @@ Actually do this from the start. Even if it is only a small log server or SaaS.
 - teams need experts helping with query performance
 </details>
 
+## Mail
+
+### Do not run _your own mailserver_ before
+
+- you have enough time before go live to ensure it is widely trusted
+- you have RBL monitoring in place
+- you track the risk of not being able to send mail
+
+<details>
+  <summary>Why?</summary>
+
+- building reputation for a new new mail domain takes a lot of send mails
+- you need to start building it before going live with production user
+- there is no guarantee that on go-live date the mail domain will be trusted
+</details>
+
 ## Hybrid cloud
 
 ### Do not start _a hybrid cloud_ before
