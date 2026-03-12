@@ -88,7 +88,7 @@ Actually do this from the start. Even if it is only a small log server or SaaS.
 
 ### Do not start _self-hosted centralized logging_ before ...
 
-- you have good estimated on log volume
+- you have good estimate on log volume
 - you have good estimates on possible deduplication
 - you know what retention you want to achieve
 - you have a reliable storage backend (e.g. S3 appliance)
