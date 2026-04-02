@@ -1,7 +1,7 @@
 # Do not start X before ...
 
 This is a collection of criteria for not doing DevOps thing X before Y is given.
-These rules a in my opinion good definitions of threshold which defines when
+These rules are in my opinion good definitions of threshold which defines when
 you want to introduce a certain type of complexity in your org+IT system. The criteria
 given here can be thought of as input for [architectural decision records](https://github.com/adr/madr).
 
